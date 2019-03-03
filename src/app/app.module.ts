@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CanvasDraw } from '../components/canvas-draw/canvas-draw';
 
+import { DeviceMotion } from '@ionic-native/device-motion';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,6 +39,7 @@ import { CanvasDraw } from '../components/canvas-draw/canvas-draw';
   providers: [
     StatusBar,
     SplashScreen,
+    DeviceMotion,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

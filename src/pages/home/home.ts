@@ -11,7 +11,7 @@ export class HomePage {
   data : any;
   subscription : any;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private deviceMotion: DeviceMotion) {
 
   }
 
@@ -20,7 +20,7 @@ export class HomePage {
       frequency: 500
     };
 
-    this.subscription = DeviceMotion.watchAcceleration(options).subscribe((acceleration: DeviceMotionAccelerationData) => {
+    this.subscription = this.deviceMotion.watchAcceleration(options).subscribe((acceleration: DeviceMotionAccelerationData) => {
       this.data = acceleration;
     })
   }
